@@ -2,7 +2,17 @@
 	<head>
 		<title>Zharktas's Private Place</title>
 		<link rel="stylesheet" href="stylesheet.css" type="text/css" />
-
+		<script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+		<script type="text/javascript">
+						
+			$(document).ready(function(){
+				$("nav li").click(function(){
+					$(".active").removeClass("active");
+					$(this).addClass("active");
+				});
+			});
+		
+		</script>
 	</head>
 	
 	<body>
@@ -11,10 +21,10 @@
 				<h1>Zharktas's Private Place</h1>
 				<nav>
 					<ul>
-						<li class="active"><a>Home</a></li>
-						<li><a>Projects</a></li>
-						<li><a>CV</a></li>
-						<li><a>Gallery</a></li>
+						<li class="active" id="home"><a>Home</a></li>
+						<li id="projects"><a>Projects</a></li>
+						<li id="cv"><a>CV</a></li>
+						<li id="gallery"><a>Gallery</a></li>
 					</ul>
 				</nav>
 			</header>
